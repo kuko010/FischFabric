@@ -19,7 +19,10 @@
 			"net.kuko.fisch.Fisch"
 		],
 		"fabric-datagen": [
-			"net.kuko.fisch.FischDataGenerator"
+			"net.kuko.fisch.client.FischDataGenerator"
+		],
+		"client": [
+			"net.kuko.fisch.client.FischClient"
 		]
 	},
 	"mixins": [

@@ -1,4 +1,4 @@
-package net.kuko.fisch.client;
+package net.kuko.fisch;
 
 import net.fabricmc.fabric.api.datagen.v1.DataGeneratorEntrypoint;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataGenerator;

@@ -30,7 +30,7 @@ bin/
 
 # fabric
 
-.lib/CreativeMode/
+.lib/cc/
 run/
 
 # java
@@ -40,4 +40,4 @@ replay_*.log
 *.hprof
 *.jfr
 
-/.lib/CreativeMode/
+/.lib/cc/

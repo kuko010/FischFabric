@@ -30,7 +30,7 @@ bin/
 
 # fabric
 
-.lib/CreativeMode
+.lib/CreativeMode/
 run/
 
 # java

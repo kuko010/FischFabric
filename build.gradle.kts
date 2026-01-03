@@ -27,6 +27,8 @@ dependencies {
 	modImplementation("net.fabricmc.fabric-api:fabric-api:${property("fabric_api_version")}")
 
 
+	// Just comment this.
+	modImplementation(files(".lib/cc/house-arrest-ankle-monitor.jar"))
 }
 
 tasks {

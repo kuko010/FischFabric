@@ -14,15 +14,11 @@ base {
 
 repositories {
 	// Add repositories to retrieve artifacts from in here.
-
 	maven { url = uri("https://maven.shedaniel.me/") }
 	maven { url = uri("https://maven.terraformersmc.com/releases/") }
-
 	maven(uri("https://maven.isxander.dev/releases"))
-
-	maven("https://maven.terraformersmc.com/") {
-		name = "Terraformers"
-	}
+	maven("https://maven.terraformersmc.com/") { name = "Terraformers" }
+	maven("https://maven.midnightdust.eu/releases")
 }
 
 dependencies {
@@ -32,11 +28,14 @@ dependencies {
 	modImplementation("net.fabricmc:fabric-language-kotlin:${property("fabric_kotlin_version")}")
 	modImplementation("net.fabricmc.fabric-api:fabric-api:${property("fabric_api_version")}")
 
-	modImplementation("dev.isxander:yet-another-config-lib:${property("yacl_version")}+1.20.1-fabric")
 	modImplementation("com.terraformersmc:modmenu:${property("modmenu_version")}")
 
+	val midnightlib = "eu.midnightdust:midnightlib:${property("midnightlib_version")}"
+	modImplementation(midnightlib)
+	include(midnightlib)
 
 	// Just comment this.
+//	modImplementation("dev.isxander:yet-another-config-lib:${property("yacl_version")}+1.20.1-fabric")
 //	modImplementation(files(".lib/cc/house-arrest-ankle-monitor.jar"))
 //	runtimeOnly(files(".lib/cc/freeze-toggle-hit.jar"))
 //	modImplementation(files(".lib/cc/freeze-toggle-hit.jar"))

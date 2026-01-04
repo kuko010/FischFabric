@@ -12,7 +12,7 @@ public class Fisch implements ModInitializer {
 	public static final Logger LOGGER = LoggerFactory.getLogger(MOD_ID);
 
 
-	//
+	// Test
 
 
 

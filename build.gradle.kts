@@ -35,7 +35,7 @@ dependencies {
 	include(midnightlib)
 
 	// Just comment this.
-//	modImplementation("dev.isxander:yet-another-config-lib:${property("yacl_version")}+1.20.1-fabric")
+	modImplementation("dev.isxander:yet-another-config-lib:${property("yacl_version")}+1.20.1-fabric")
 //	modImplementation(files(".lib/cc/house-arrest-ankle-monitor.jar"))
 //	runtimeOnly(files(".lib/cc/freeze-toggle-hit.jar"))
 //	modImplementation(files(".lib/cc/freeze-toggle-hit.jar"))

@@ -14,6 +14,8 @@ base {
 
 repositories {
 	// Add repositories to retrieve artifacts from in here.
+
+
 }
 
 dependencies {
@@ -33,7 +35,7 @@ dependencies {
 
 
 //	runtimeOnly(files(".lib/cc/freeze-toggle-hit.jar"))
-//	compileOnly(files(".lib/cc/freeze-toggle-hit.jar"))
+	modImplementation(files(".lib/cc/freeze-toggle-hit.jar"))
 }
 
 tasks {

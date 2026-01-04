@@ -13,7 +13,7 @@ import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
 @Mixin({PlayerEntity.class})
-public class FreezeAttackMixin {
+public class AttackMixin {
 
     @Inject(
             method = {"attack"},
@@ -32,4 +32,4 @@ public class FreezeAttackMixin {
             }
         }
     }
-}
+} 

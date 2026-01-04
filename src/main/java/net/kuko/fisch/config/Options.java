@@ -1,0 +1,35 @@
+package net.kuko.fisch.config;
+
+import dev.isxander.yacl3.api.Option;
+import dev.isxander.yacl3.api.OptionDescription;
+import dev.isxander.yacl3.api.OptionFlag;
+import dev.isxander.yacl3.api.controller.BooleanControllerBuilder;
+import dev.isxander.yacl3.api.controller.StringControllerBuilder;
+import net.minecraft.text.Text;
+
+import static net.kuko.fisch.config.ModConfigv1.config;
+
+public class Options {
+
+    public static Option<String> freeze_item = Option.<String>createBuilder()
+            .name(Text.translatable("config.fisch.freeze_item"))
+            .description(OptionDescription.of(Text.translatable("config.fisch.freeze_item.description")))
+            .binding(
+                    "minecraft:stick",
+                    () -> config.freeze.item,
+                    newVal -> config.freeze.item = newVal)
+            .controller(StringControllerBuilder::create)
+            .flag(OptionFlag.GAME_RESTART)
+            .build();
+
+    public static Option<Boolean> freeze_enable = Option.<Boolean>createBuilder()
+            .name(Text.translatable("config.fisch.freeze_enable"))
+            .description(OptionDescription.of(Text.translatable("config.fisch.freeze_enable.description")))
+            .binding(
+                    Boolean.TRUE,
+                    () -> config.freeze.enable,
+                    newVal -> config.freeze.enable = newVal)
+            .controller(BooleanControllerBuilder::create)
+            .flag(OptionFlag.GAME_RESTART)
+            .build();
+}

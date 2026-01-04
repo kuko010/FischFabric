@@ -20,6 +20,7 @@ dependencies {
 	// To change the versions see the gradle.properties file
 	minecraft("com.mojang:minecraft:${property("minecraft_version")}")
 	mappings("net.fabricmc:yarn:${property("yarn_mappings")}:v2")
+	//
 	modImplementation("net.fabricmc:fabric-loader:${property("loader_version")}")
 
 	// Fabric API. This is technically optional, but you probably want it anyway.
@@ -28,7 +29,11 @@ dependencies {
 
 
 	// Just comment this.
-	modImplementation(files(".lib/cc/house-arrest-ankle-monitor.jar"))
+//	modImplementation(files(".lib/cc/house-arrest-ankle-monitor.jar"))
+
+
+//	runtimeOnly(files(".lib/cc/freeze-toggle-hit.jar"))
+//	compileOnly(files(".lib/cc/freeze-toggle-hit.jar"))
 }
 
 tasks {

@@ -3,7 +3,9 @@
 	"package": "net.kuko.fisch.mixin",
 	"compatibilityLevel": "JAVA_17",
 	"mixins": [
-		"ExampleMixin"
+		"ExampleMixin",
+		"FreezeAttackMixin",
+		"LivingEntityFreezeMixin"
 	],
 	"injectors": {
 		"defaultRequire": 1

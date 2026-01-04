@@ -1,14 +1,10 @@
-package net.kuko.fisch.client.screen;
+package net.kuko.fisch.client.screen.client;
 
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
-import net.kuko.fisch.Fisch;
 import net.minecraft.client.gui.DrawContext;
 import net.minecraft.client.gui.screen.Screen;
 import net.minecraft.text.Text;
-import org.joml.Vector2i;
-
-import java.awt.*;
 
 @Environment(EnvType.CLIENT)
 public class OdeToBeansScreen extends Screen {

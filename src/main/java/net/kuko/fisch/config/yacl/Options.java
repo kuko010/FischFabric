@@ -1,4 +1,4 @@
-package net.kuko.fisch.config;
+package net.kuko.fisch.config.yacl;
 
 import dev.isxander.yacl3.api.Option;
 import dev.isxander.yacl3.api.OptionDescription;
@@ -7,7 +7,7 @@ import dev.isxander.yacl3.api.controller.BooleanControllerBuilder;
 import dev.isxander.yacl3.api.controller.StringControllerBuilder;
 import net.minecraft.text.Text;
 
-import static net.kuko.fisch.config.ModConfigv1.config;
+import static net.kuko.fisch.config.yacl.ModConfigv1.config;
 
 public class Options {
 

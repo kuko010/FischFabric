@@ -1,4 +1,4 @@
-package net.kuko.fisch.config;
+package net.kuko.fisch.config.yacl;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;

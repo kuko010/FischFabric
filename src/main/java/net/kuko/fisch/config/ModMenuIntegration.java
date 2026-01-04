@@ -2,7 +2,7 @@ package net.kuko.fisch.config;
 
 import com.terraformersmc.modmenu.api.ConfigScreenFactory;
 import com.terraformersmc.modmenu.api.ModMenuApi;
-import dev.isxander.yacl3.api.YetAnotherConfigLib;
+import net.kuko.fisch.config.yacl.ModConfigv1;
 
 public class ModMenuIntegration implements ModMenuApi {
 
@@ -10,7 +10,10 @@ public class ModMenuIntegration implements ModMenuApi {
     public ConfigScreenFactory<?> getModConfigScreenFactory() {
         return parent -> {
             // Create fresh config each time
-            return ModConfigv1.MainConfig().generateScreen(parent);
+            // Nope. Gonna use Midnightlib
+//            return ModConfigv1.MainConfig().generateScreen(parent);
+
+
         };
     }
 }

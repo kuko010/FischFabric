@@ -1,7 +1,7 @@
 package net.kuko.fisch.mixin;
 
 
-import net.kuko.fisch.config.ModConfigv1;
+import net.kuko.fisch.config.yacl.ModConfigv1;
 import net.kuko.fisch.interfs.LivingEntityFreeze;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.LivingEntity;

@@ -3,7 +3,6 @@ package net.kuko.fisch;
 import net.fabricmc.api.ModInitializer;
 
 import net.kuko.fisch.item.ModItems;
-import net.minecraft.registry.Registry;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -13,7 +12,6 @@ public class Fisch implements ModInitializer {
 
 
 	// Test
-
 
 
 	@Override

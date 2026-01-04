@@ -15,27 +15,31 @@ base {
 repositories {
 	// Add repositories to retrieve artifacts from in here.
 
+	maven { url = uri("https://maven.shedaniel.me/") }
+	maven { url = uri("https://maven.terraformersmc.com/releases/") }
 
+	maven(uri("https://maven.isxander.dev/releases"))
+
+	maven("https://maven.terraformersmc.com/") {
+		name = "Terraformers"
+	}
 }
 
 dependencies {
-	// To change the versions see the gradle.properties file
 	minecraft("com.mojang:minecraft:${property("minecraft_version")}")
 	mappings("net.fabricmc:yarn:${property("yarn_mappings")}:v2")
-	//
 	modImplementation("net.fabricmc:fabric-loader:${property("loader_version")}")
-
-	// Fabric API. This is technically optional, but you probably want it anyway.
 	modImplementation("net.fabricmc:fabric-language-kotlin:${property("fabric_kotlin_version")}")
 	modImplementation("net.fabricmc.fabric-api:fabric-api:${property("fabric_api_version")}")
+
+	modImplementation("dev.isxander:yet-another-config-lib:${property("yacl_version")}+1.20.1-fabric")
+	modImplementation("com.terraformersmc:modmenu:${property("modmenu_version")}")
 
 
 	// Just comment this.
 //	modImplementation(files(".lib/cc/house-arrest-ankle-monitor.jar"))
-
-
 //	runtimeOnly(files(".lib/cc/freeze-toggle-hit.jar"))
-	modImplementation(files(".lib/cc/freeze-toggle-hit.jar"))
+//	modImplementation(files(".lib/cc/freeze-toggle-hit.jar"))
 }
 
 tasks {

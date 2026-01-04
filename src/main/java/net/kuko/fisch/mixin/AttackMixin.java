@@ -1,6 +1,8 @@
 package net.kuko.fisch.mixin;
 
 
+import net.kuko.fisch.Fisch;
+import net.kuko.fisch.config.ModConfigv1;
 import net.kuko.fisch.interfs.LivingEntityFreeze;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.LivingEntity;
@@ -27,9 +29,10 @@ public class AttackMixin {
                 if (target instanceof LivingEntity living) {
                     if (living instanceof LivingEntityFreeze freezeable) {
                         freezeable.toggleFrozen();
+                        Fisch.LOGGER.info(ModConfigv1.config.freeze_item);
                     }
                 }
             }
         }
     }
-} 
+}

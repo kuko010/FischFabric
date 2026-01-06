@@ -30,9 +30,9 @@ dependencies {
 
 	modImplementation("com.terraformersmc:modmenu:${property("modmenu_version")}")
 
-	val midnightlib = "eu.midnightdust:midnightlib:${property("midnightlib_version")}"
-	modImplementation(midnightlib)
-	include(midnightlib)
+//	val midnightlib = "eu.midnightdust:midnightlib:${property("midnightlib_version")}"
+//	modImplementation(midnightlib)
+//	include(midnightlib)
 
 	// Just comment this.
 	modImplementation("dev.isxander:yet-another-config-lib:${property("yacl_version")}+1.20.1-fabric")

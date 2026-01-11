@@ -30,4 +30,21 @@ public class FischClient implements ClientModInitializer {
             }
         });
     }
+
+	/*
+   // Because of Fish Entry
+    public static final ResourceKey<Registry<FishProperties>> FISH_REGISTRY =
+            ResourceKey.createRegistryKey(rl("fish"));
+
+    // Because of Fish Entry
+    @SubscribeEvent
+    public static void addRegistries(DataPackRegistryEvent.NewRegistry event) {
+        event.dataPackRegistry(
+                FISH_REGISTRY,
+                FishProperties.CODEC,
+                FishProperties.CODEC,
+                builder -> builder.maxId(256)
+        );
+    }
+*/
 }

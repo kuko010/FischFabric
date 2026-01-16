@@ -19,12 +19,6 @@ public class ModConfigv1 {
 
 
     public static class ConfigData {
-        public static class FreezeConfig {
-            @Nullable public String item = "minecraft:stick";
-            @Nullable public Boolean enable = Boolean.FALSE;
-        }
-
-        public FreezeConfig freeze = new FreezeConfig();
     }
 
     private static final Path CONFIG_FILE = Path.of("config/fisch.json");
@@ -37,12 +31,6 @@ public class ModConfigv1 {
                 .category(ConfigCategory.createBuilder()
                         .name(Text.translatable("config.fisch.fisch_category"))
                         .tooltip(Text.translatable("config.fisch.fisch_category.tooltip"))
-                        .group(OptionGroup.createBuilder()
-                                .name(Text.translatable("config.fisch.freeze.group"))
-                                .description(OptionDescription.of(Text.translatable("config.fisch.freeze.group.description")))
-                                .option(Options.freeze_item)
-                                .option(Options.freeze_enable)
-                                .build())
                         .build())
 
                 .save(ModConfigv1::saveConfig)
@@ -58,8 +46,8 @@ public class ModConfigv1 {
                 config = GSON.fromJson(json, ConfigData.class);
 
                 // Validate/set defaults if fields are null
-                if (config.freeze.item == null) config.freeze.item = "minecraft:air";
-                if (config.freeze.enable == null) config.freeze.enable = Boolean.FALSE;
+//                if (config.freeze.item == null) config.freeze.item = "minecraft:air";
+//                if (config.freeze.enable == null) config.freeze.enable = Boolean.FALSE;
             } else {
                 saveConfig();
             }

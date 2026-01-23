@@ -1,4 +1,4 @@
-package net.kuko.fisch.client.screen.client;
+package net.kuko.fisch.client.screen;
 
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;

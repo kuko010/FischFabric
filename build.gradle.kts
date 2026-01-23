@@ -42,13 +42,17 @@ dependencies {
 	modImplementation("net.fabricmc:fabric-loader:${property("loader_version")}")
 	modImplementation("net.fabricmc:fabric-language-kotlin:${property("fabric_kotlin_version")}")
 	modImplementation("net.fabricmc.fabric-api:fabric-api:${property("fabric_api_version")}")
-
 	modImplementation("com.terraformersmc:modmenu:${property("modmenu_version")}")
 
-	runtimeOnly("TechReborn:TechReborn-1.20.1:5.8.9")
+	// Optionals
+	modImplementation("maven.modrinth:emi:1.1.22+1.20.1+fabric")
+	modImplementation("TechReborn:TechReborn-1.20.1:5.8.9")
+	modImplementation("RebornCore:RebornCore-1.20.1:5.8.9")
+
 	// Added energy.
+	// https://modmaven.dev/
 	modImplementation("teamreborn:energy:3.0.0")
-	//modApi("teamreborn:energy:3.0.0")
+	modApi("teamreborn:energy:3.0.0")
 	include("teamreborn:energy:3.0.0")
 
 //	val midnightlib = "eu.midnightdust:midnightlib:${property("midnightlib_version")}"

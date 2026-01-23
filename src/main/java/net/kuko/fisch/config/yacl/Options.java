@@ -1,16 +1,10 @@
 package net.kuko.fisch.config.yacl;
 
-import dev.isxander.yacl3.api.Option;
-import dev.isxander.yacl3.api.OptionDescription;
-import dev.isxander.yacl3.api.OptionFlag;
-import dev.isxander.yacl3.api.controller.BooleanControllerBuilder;
-import dev.isxander.yacl3.api.controller.StringControllerBuilder;
-import net.minecraft.text.Text;
 
 import static net.kuko.fisch.config.yacl.ModConfigv1.config;
 
 public class Options {
-
+/*
     public static Option<String> freeze_item = Option.<String>createBuilder()
             .name(Text.translatable("config.fisch.freeze_item"))
             .description(OptionDescription.of(Text.translatable("config.fisch.freeze_item.description")))
@@ -31,5 +25,5 @@ public class Options {
                     newVal -> config.freeze.enable = newVal)
             .controller(BooleanControllerBuilder::create)
             .flag(OptionFlag.GAME_RESTART)
-            .build();
+            .build();*/
 }

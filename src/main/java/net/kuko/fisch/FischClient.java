@@ -26,5 +26,11 @@ public class FischClient implements ClientModInitializer {
 //                MinecraftClient.getInstance().setScreen(new OdeToBeansScreen());
             }
         });
+
+        // Register screen
+//        ScreenRegistry.register(
+//                ModScreenHandlers.CRYSTAL_CHARGER_SCREEN_HANDLER,
+//                CrystalChargerScreen::new
+//        );
     }
 }

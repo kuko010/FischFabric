@@ -30,6 +30,11 @@ dependencies {
 
 	modImplementation("com.terraformersmc:modmenu:${property("modmenu_version")}")
 
+	// Added energy.
+	modApi("teamreborn:energy:3.0.0")
+	include("teamreborn:energy:3.0.0")
+
+
 //	val midnightlib = "eu.midnightdust:midnightlib:${property("midnightlib_version")}"
 //	modImplementation(midnightlib)
 //	include(midnightlib)

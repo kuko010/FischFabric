@@ -13,12 +13,27 @@ base {
 }
 
 repositories {
+	mavenCentral()
 	// Add repositories to retrieve artifacts from in here.
 	maven { url = uri("https://maven.shedaniel.me/") }
 	maven { url = uri("https://maven.terraformersmc.com/releases/") }
 	maven(uri("https://maven.isxander.dev/releases"))
 	maven("https://maven.terraformersmc.com/") { name = "Terraformers" }
 	maven("https://maven.midnightdust.eu/releases")
+
+	exclusiveContent {
+		forRepository {
+			maven { name = "Modrinth"; url = uri("https://api.modrinth.com/maven") }
+		}
+		filter { includeGroup("maven.modrinth") }
+	}
+	exclusiveContent {
+		forRepository {
+			maven { url = uri("https://cursemaven.com") }
+		}
+		filter { includeGroup("curse.maven") }
+	}
+	maven { name = "ModMaven"; url = uri("https://modmaven.dev") }
 }
 
 dependencies {
@@ -30,10 +45,11 @@ dependencies {
 
 	modImplementation("com.terraformersmc:modmenu:${property("modmenu_version")}")
 
+	runtimeOnly("TechReborn:TechReborn-1.20.1:5.8.9")
 	// Added energy.
-	modApi("teamreborn:energy:3.0.0")
+	modImplementation("teamreborn:energy:3.0.0")
+	//modApi("teamreborn:energy:3.0.0")
 	include("teamreborn:energy:3.0.0")
-
 
 //	val midnightlib = "eu.midnightdust:midnightlib:${property("midnightlib_version")}"
 //	modImplementation(midnightlib)

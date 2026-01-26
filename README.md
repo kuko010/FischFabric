@@ -3,5 +3,5 @@
 ![License](https://img.shields.io/badge/License-MIT0-blue.svg)
 [![Repo Health](https://api.gitscope.dev/api/badges/kuko010/FischFabric/health.svg)](https://gitscope.dev)
 
-# :warning: Subject to frequent changes
+# :warning: Subject to frequent changes — highly unstable :warning:
 ## Not a Fishing Mod

@@ -34,6 +34,9 @@ repositories {
 		filter { includeGroup("curse.maven") }
 	}
 	maven { name = "ModMaven"; url = uri("https://modmaven.dev") }
+
+	// owo-lib
+	maven { url = uri("https://maven.wispforest.io/releases/") }
 }
 
 dependencies {
@@ -56,6 +59,11 @@ dependencies {
 	include("teamreborn:energy:3.0.0")
 
 	modImplementation("dev.isxander:yet-another-config-lib:${property("yacl_version")}+1.20.1-fabric")
+
+
+	// owo-lib
+	modImplementation("io.wispforest:owo-lib:${property("owo_version")}")
+	include("io.wispforest:owo-sentinel:${property("owo_version")}")
 }
 
 tasks {

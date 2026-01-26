@@ -45,9 +45,9 @@ dependencies {
 	modImplementation("com.terraformersmc:modmenu:${property("modmenu_version")}")
 
 	// Optionals
-	modImplementation("maven.modrinth:emi:1.1.22+1.20.1+fabric")
-	modImplementation("TechReborn:TechReborn-1.20.1:5.8.9")
-	modImplementation("RebornCore:RebornCore-1.20.1:5.8.9")
+	modRuntimeOnly("maven.modrinth:emi:1.1.22+1.20.1+fabric")
+	modRuntimeOnly("TechReborn:TechReborn-1.20.1:5.8.9")
+	modRuntimeOnly("RebornCore:RebornCore-1.20.1:5.8.9")
 
 	// Added energy.
 	// https://modmaven.dev/
@@ -55,15 +55,7 @@ dependencies {
 	modApi("teamreborn:energy:3.0.0")
 	include("teamreborn:energy:3.0.0")
 
-//	val midnightlib = "eu.midnightdust:midnightlib:${property("midnightlib_version")}"
-//	modImplementation(midnightlib)
-//	include(midnightlib)
-
-	// Just comment this.
 	modImplementation("dev.isxander:yet-another-config-lib:${property("yacl_version")}+1.20.1-fabric")
-//	modImplementation(files(".lib/cc/house-arrest-ankle-monitor.jar"))
-//	runtimeOnly(files(".lib/cc/freeze-toggle-hit.jar"))
-//	modImplementation(files(".lib/cc/freeze-toggle-hit.jar"))
 }
 
 tasks {

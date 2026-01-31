@@ -45,6 +45,11 @@ dependencies {
 	modImplementation("net.fabricmc:fabric-loader:${property("loader_version")}")
 	modImplementation("net.fabricmc:fabric-language-kotlin:${property("fabric_kotlin_version")}")
 	modImplementation("net.fabricmc.fabric-api:fabric-api:${property("fabric_api_version")}")
+
+	implementation("org.luaj:luaj-jse:3.0.1")
+	modImplementation("org.luaj:luaj-jse:3.0.1")
+	include("org.luaj:luaj-jse:3.0.1")
+
 	modImplementation("com.terraformersmc:modmenu:${property("modmenu_version")}")
 
 	// Optionals
@@ -59,7 +64,6 @@ dependencies {
 	include("teamreborn:energy:3.0.0")
 
 	modImplementation("dev.isxander:yet-another-config-lib:${property("yacl_version")}+1.20.1-fabric")
-
 
 	// owo-lib
 	modImplementation("io.wispforest:owo-lib:${property("owo_version")}")

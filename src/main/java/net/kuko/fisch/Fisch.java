@@ -3,9 +3,13 @@ package net.kuko.fisch;
 import io.wispforest.owo.registration.reflect.FieldRegistrationHandler;
 import net.fabricmc.api.ModInitializer;
 
-import net.kuko.fisch.registries.ModBlockEntitiesInit;
-import net.kuko.fisch.registries.ModBlocksInit;
+import net.kuko.fisch.registries.ModBlockEntities;
+import net.kuko.fisch.registries.ModBlocks;
+import net.kuko.fisch.registries.ModItems;
 import net.minecraft.util.Identifier;
+import org.luaj.vm2.Globals;
+import org.luaj.vm2.LuaValue;
+import org.luaj.vm2.lib.jse.JsePlatform;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -25,7 +29,8 @@ public class Fisch implements ModInitializer {
 //		ModBlockEntities.register();
 //		ModEnergy.register(); // Add this line
 
-		FieldRegistrationHandler.register(ModBlocksInit.class, MOD_ID, false);
-		FieldRegistrationHandler.register(ModBlockEntitiesInit.class, MOD_ID, false);
+		FieldRegistrationHandler.register(ModBlocks.class, MOD_ID, false);
+		FieldRegistrationHandler.register(ModBlockEntities.class, MOD_ID, false);
+		FieldRegistrationHandler.register(ModItems.class, MOD_ID, false);
 	}
 }

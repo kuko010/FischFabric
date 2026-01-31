@@ -6,7 +6,7 @@ import net.minecraft.block.Block;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 
-public class ModBlocksInit implements BlockRegistryContainer {
+public class ModBlocks implements BlockRegistryContainer {
 //    public static final Block EXAMPLE_PEDESTAL = new ExamplePedestal(FabricBlockSettings.create());
 
 

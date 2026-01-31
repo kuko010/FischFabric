@@ -5,7 +5,7 @@ import net.minecraft.block.entity.BlockEntityType;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 
-public class ModBlockEntitiesInit implements AutoRegistryContainer<BlockEntityType<?>> {
+public class ModBlockEntities implements AutoRegistryContainer<BlockEntityType<?>> {
 //    public static final BlockEntityType<ExamplePedestalBlockEntity> EXAMPLE_PEDESTAL_BE = FabricBlockEntityTypeBuilder.create(ExamplePedestalBlockEntity::new,
 //            ModBlocksInit.EXAMPLE_PEDESTAL).build();
 

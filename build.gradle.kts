@@ -1,3 +1,5 @@
+import net.fabricmc.loom.configuration.ide.RunConfigSettings
+
 plugins {
 	kotlin("jvm")
 	id("fabric-loom")
@@ -70,7 +72,29 @@ dependencies {
 	include("io.wispforest:owo-sentinel:${property("owo_version")}")
 }
 
+loom {
+	runs {
+		// 1. Configure the existing "client" run
+		val clientSettings = getByName("client") as RunConfigSettings
+
+		// 2. Create the secondary client in two steps
+		// This avoids the "No type arguments expected" error on the create() method
+		val secondary = create("clientKuko")
+		(secondary as RunConfigSettings).apply {
+			inherit(clientSettings)
+			programArg("--username=kuko")
+			programArg("--uuid=f3147754-7646-4687-8804-7acdf233c159")
+		}
+	}
+}
+
 tasks {
+
+
+
+
+	// (Optional) you can also add other args/flags like gameDir, etc.
+
 	processResources {
 		inputs.property("version", project.version)
 		filesMatching("fabric.mod.json") {

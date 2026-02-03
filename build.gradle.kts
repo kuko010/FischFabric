@@ -29,15 +29,10 @@ repositories {
 		}
 		filter { includeGroup("maven.modrinth") }
 	}
-	exclusiveContent {
-		forRepository {
-			maven { url = uri("https://cursemaven.com") }
-		}
-		filter { includeGroup("curse.maven") }
-	}
+	/* TeamReborn Energy */
 	maven { name = "ModMaven"; url = uri("https://modmaven.dev") }
 
-	// owo-lib
+	/* owo-lib */
 	maven { url = uri("https://maven.wispforest.io/releases/") }
 }
 
@@ -48,28 +43,26 @@ dependencies {
 	modImplementation("net.fabricmc:fabric-language-kotlin:${property("fabric_kotlin_version")}")
 	modImplementation("net.fabricmc.fabric-api:fabric-api:${property("fabric_api_version")}")
 
-	implementation("org.luaj:luaj-jse:3.0.1")
-	modImplementation("org.luaj:luaj-jse:3.0.1")
-	include("org.luaj:luaj-jse:3.0.1")
-
-	modImplementation("com.terraformersmc:modmenu:${property("modmenu_version")}")
-
-	// Optionals
+	// Utility
 	modRuntimeOnly("maven.modrinth:emi:1.1.22+1.20.1+fabric")
-	modRuntimeOnly("TechReborn:TechReborn-1.20.1:5.8.9")
-	modRuntimeOnly("RebornCore:RebornCore-1.20.1:5.8.9")
 
-	// Added energy.
-	// https://modmaven.dev/
+	/* TeamReborn Energy */
 	modImplementation("teamreborn:energy:3.0.0")
 	modApi("teamreborn:energy:3.0.0")
 	include("teamreborn:energy:3.0.0")
 
-	modImplementation("dev.isxander:yet-another-config-lib:${property("yacl_version")}+1.20.1-fabric")
-
-	// owo-lib
+	//
+	/* oωo */
 	modImplementation("io.wispforest:owo-lib:${property("owo_version")}")
 	include("io.wispforest:owo-sentinel:${property("owo_version")}")
+
+	/* Lua */
+	implementation("org.luaj:luaj-jse:3.0.1")
+	modImplementation("org.luaj:luaj-jse:3.0.1")
+	include("org.luaj:luaj-jse:3.0.1")
+
+	/* Config */
+	modImplementation("dev.isxander:yet-another-config-lib:${property("yacl_version")}+1.20.1-fabric")
 }
 
 loom {

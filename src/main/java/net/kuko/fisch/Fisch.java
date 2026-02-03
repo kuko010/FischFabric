@@ -29,11 +29,9 @@ public class Fisch implements ModInitializer {
 //		ModBlockEntities.register();
 //		ModEnergy.register(); // Add this line
 
-		FieldRegistrationHandler.register(ModBlocks.class, MOD_ID, false);
-		FieldRegistrationHandler.register(ModBlockEntities.class, MOD_ID, false);
-		FieldRegistrationHandler.register(ModItems.class, MOD_ID, false);
 		ModBlocks.register();
 		ModBlockEntities.register();
 		ModItems.register();
+		ModEnergy.register();
 	}
 }

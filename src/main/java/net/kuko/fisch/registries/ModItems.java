@@ -13,4 +13,10 @@ public class ModItems implements ItemRegistryContainer {
         FieldRegistrationHandler.register(ModItems.class, Fisch.MOD_ID, false);
     }
 
+    public static void addTab() {
+        ItemGroupEvents.modifyEntriesEvent(ItemGroups.INGREDIENTS).register(content -> {
+            content.add(NEW_ITEM); // Adds to the end
+//            content.addAfter(Items.DIAMOND, MOD_ITEM); // Adds after a specific item
+        });
+    }
 }

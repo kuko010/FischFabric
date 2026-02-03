@@ -5,6 +5,7 @@ import net.fabricmc.api.ModInitializer;
 
 import net.kuko.fisch.registries.ModBlockEntities;
 import net.kuko.fisch.registries.ModBlocks;
+import net.kuko.fisch.registries.ModEnergy;
 import net.kuko.fisch.registries.ModItems;
 import net.minecraft.util.Identifier;
 import org.luaj.vm2.Globals;

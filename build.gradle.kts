@@ -34,6 +34,17 @@ repositories {
 
 	/* owo-lib */
 	maven { url = uri("https://maven.wispforest.io/releases/") }
+
+	/* Satin */
+	maven {
+		name = "Ladysnake Mods"
+		url = uri("https://maven.ladysnake.org/releases")
+		content {
+			includeGroup("io.github.ladysnake")
+			includeGroup("org.ladysnake")
+			includeGroupByRegex("dev\\.onyxstudios.*")
+		}
+	}
 }
 
 dependencies {
@@ -63,6 +74,11 @@ dependencies {
 
 	/* Config */
 	modImplementation("dev.isxander:yet-another-config-lib:${property("yacl_version")}+1.20.1-fabric")
+
+	/* Satin */
+	modImplementation("org.ladysnake:satin:1.14.0")
+// Include Satin as a Jar-in-Jar dependency (optional)
+	include("org.ladysnake:satin:1.14.0")
 }
 
 loom {

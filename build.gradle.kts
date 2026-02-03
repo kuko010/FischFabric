@@ -89,10 +89,6 @@ loom {
 }
 
 tasks {
-
-
-
-
 	// (Optional) you can also add other args/flags like gameDir, etc.
 
 	processResources {
@@ -118,6 +114,11 @@ java {
 	sourceCompatibility = JavaVersion.VERSION_17
 	targetCompatibility = JavaVersion.VERSION_17
 }
+
+tasks.named<Jar>("sourcesJar") {
+	duplicatesStrategy = DuplicatesStrategy.INCLUDE
+}
+
 
 publishing {
 	publications {

@@ -8,6 +8,8 @@ import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroups;
 
 public class ModItems implements ItemRegistryContainer {
+    public static final Item NEW_ITEM = new Item(new Item.Settings());
+
 
     public static void register() {
         FieldRegistrationHandler.register(ModItems.class, Fisch.MOD_ID, false);

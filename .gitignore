@@ -40,5 +40,4 @@ replay_*.log
 *.hprof
 *.jfr
 
-.lib
-/.lib/
+/.lib/cc/

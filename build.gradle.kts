@@ -40,7 +40,7 @@ repositories {
 }
 
 
-
+val lib = file(".lib")
 dependencies {
 	minecraft("com.mojang:minecraft:${property("minecraft_version")}")
 	mappings("net.fabricmc:yarn:${property("yarn_mappings")}:v2")
@@ -70,8 +70,14 @@ dependencies {
 	modImplementation("dev.isxander:yet-another-config-lib:${property("yacl_version")}+1.20.4-fabric")
 
 
-	/* Decompiler for .lib folder */
-
+	/* Decompiler and Mapper for .lib folder */
+	if (lib.exists() && lib.isDirectory) {
+		lib.listFiles { file ->
+			file.isFile && file.extension == "jar"
+		}?.forEach { jar ->
+			modImplementation(files(jar))
+		}
+	}
 
 	/* ModMenu */
 	modRuntimeOnly("com.terraformersmc:modmenu:${property("modmenu_version")}")

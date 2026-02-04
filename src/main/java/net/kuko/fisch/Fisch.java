@@ -25,11 +25,6 @@ public class Fisch implements ModInitializer {
 	@Override
 	public void onInitialize() {
 		LOGGER.info("Hello Fabric world!");
-//		ModItems.register();
-//		ModBlocks.register();
-//		ModBlockEntities.register();
-//		ModEnergy.register(); // Add this line
-
 		ModBlocks.register();
 		ModBlockEntities.register();
 		ModItems.register();

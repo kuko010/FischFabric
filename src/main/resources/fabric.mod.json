@@ -22,7 +22,7 @@
 			"net.kuko.fisch.FischDataGenerator"
 		],
 		"client": [
-          "net.kuko.fisch.FischClient"
+			"net.kuko.fisch.FischClient"
 		]
 	},
 	"mixins": [
@@ -30,7 +30,7 @@
 	],
 	"depends": {
 		"fabricloader": ">=0.16.3",
-		"minecraft": "~1.20.1",
+		"minecraft": "~1.20.4",
 		"java": ">=17",
 		"fabric-api": "*",
 		"fabric-language-kotlin": "*",

@@ -34,7 +34,12 @@ repositories {
 
 	/* owo-lib */
 	maven { url = uri("https://maven.wispforest.io/releases/") }
+
+	/* Placeholder API */
+	maven("https://maven.nucleoid.xyz/") { name = "Nucleoid" }
 }
+
+
 
 dependencies {
 	minecraft("com.mojang:minecraft:${property("minecraft_version")}")
@@ -44,7 +49,7 @@ dependencies {
 	modImplementation("net.fabricmc.fabric-api:fabric-api:${property("fabric_api_version")}")
 
 	// Utility
-	modRuntimeOnly("maven.modrinth:emi:1.1.22+1.20.1+fabric")
+	modRuntimeOnly("maven.modrinth:emi:1.1.22+1.20.4+fabric")
 
 	/* TeamReborn Energy */
 	modImplementation("teamreborn:energy:3.0.0")
@@ -62,7 +67,15 @@ dependencies {
 	include("org.luaj:luaj-jse:3.0.1")
 
 	/* Config */
-	modImplementation("dev.isxander:yet-another-config-lib:${property("yacl_version")}+1.20.1-fabric")
+	modImplementation("dev.isxander:yet-another-config-lib:${property("yacl_version")}+1.20.4-fabric")
+
+
+	/* Decompiler for .lib folder */
+
+
+	/* ModMenu */
+	modRuntimeOnly("com.terraformersmc:modmenu:${property("modmenu_version")}")
+//	compileOnly("me.clip:placeholderapi:2.12.1")
 }
 
 loom {

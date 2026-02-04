@@ -7,3 +7,6 @@
 # These are Windows script files and should use crlf
 *.bat           text eol=crlf
 
+build.gradle.kts merge=ours
+settings.gradle.kts merge=ours
+gradle.properties merge=ours

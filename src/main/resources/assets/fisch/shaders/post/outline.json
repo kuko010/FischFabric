@@ -1,0 +1,22 @@
+{
+  "targets": [ "swap" ],
+  "passes": [
+    {
+      "name": "fisch:outline",
+      "intarget": "minecraft:main",
+      "outtarget": "swap",
+      "auxtargets": [
+        {
+          "name": "DepthSampler",
+          "id": "minecraft:main",
+          "depth": true
+        }
+      ]
+    },
+    {
+      "name": "blit",
+      "intarget": "swap",
+      "outtarget": "minecraft:main"
+    }
+  ]
+}

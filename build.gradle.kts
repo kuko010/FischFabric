@@ -47,6 +47,10 @@ repositories {
 	}
 }
 
+
+val lib = file(".lib/1.20.1")
+
+
 dependencies {
 	minecraft("com.mojang:minecraft:${property("minecraft_version")}")
 	mappings("net.fabricmc:yarn:${property("yarn_mappings")}:v2")
@@ -56,6 +60,7 @@ dependencies {
 
 	// Utility
 	modRuntimeOnly("maven.modrinth:emi:1.1.22+1.20.1+fabric")
+	modRuntimeOnly("com.terraformersmc:modmenu:${property("modmenu_version")}")
 
 	/* TeamReborn Energy */
 	modImplementation("teamreborn:energy:3.0.0")
@@ -75,10 +80,15 @@ dependencies {
 	/* Config */
 	modImplementation("dev.isxander:yet-another-config-lib:${property("yacl_version")}+1.20.1-fabric")
 
-	/* Satin */
-	modImplementation("org.ladysnake:satin:1.14.0")
-// Include Satin as a Jar-in-Jar dependency (optional)
-	include("org.ladysnake:satin:1.14.0")
+
+	/* Decompiler and Mapper for .lib folder */
+	if (lib.exists() && lib.isDirectory) {
+		lib.listFiles { file ->
+			file.isFile && file.extension == "jar"
+		}?.forEach { jar ->
+			modImplementation(files(jar))
+		}
+	}
 }
 
 loom {

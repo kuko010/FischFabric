@@ -48,8 +48,7 @@ repositories {
 }
 
 
-val lib = file(".lib/1.20.1")
-
+val lib = file(".lib/1201")
 
 dependencies {
 	minecraft("com.mojang:minecraft:${property("minecraft_version")}")
@@ -89,6 +88,11 @@ dependencies {
 			modImplementation(files(jar))
 		}
 	}
+
+	implementation("net.kyori:adventure-text-minimessage:4.26.1")
+	modImplementation("net.kyori:adventure-text-serializer-json:4.25.0")
+	modImplementation("net.kyori:adventure-text-minimessage:4.25.0")
+	modImplementation("net.kyori:adventure-platform-fabric:5.8.0")
 }
 
 loom {

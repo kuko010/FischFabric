@@ -22,7 +22,8 @@
 			"net.kuko.fisch.FischDataGenerator"
 		],
 		"client": [
-          "net.kuko.fisch.FischClient"
+          "net.kuko.fisch.FischClient",
+			"net.kuko.fisch.Tooltips"
 		]
 	},
 	"mixins": [

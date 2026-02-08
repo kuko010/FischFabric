@@ -7,5 +7,8 @@
   "config.fisch.freeze.group": "Freezing of Entities",
   "config.fisch.freeze.group.description": "Configs for Freezing items",
   "config.fisch.freeze_enable": "Freeze Enable",
-  "config.fisch.freeze_enable.description": "Just Enables or Disables The Freezing"
+  "config.fisch.freeze_enable.description": "Just Enables or Disables The Freezing",
+  "tooltip.libtooltips.generic.shift_up": "⏬ §l§3[Shift]§r ⏬",
+  "tooltip.libtooltips.generic.shift_down": "⏫ §l§6[Shift]§r ⏫",
+  "tooltip.libtooltips.generic.empty" : ""
 }

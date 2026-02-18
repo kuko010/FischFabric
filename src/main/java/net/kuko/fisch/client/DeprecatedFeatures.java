@@ -1,4 +1,6 @@
-package net.kuko.fisch.client.screen
+package net.kuko.fisch.client;
+
+/*
 
 import io.wispforest.owo.ui.component.Components
 import io.wispforest.owo.ui.container.Containers
@@ -43,3 +45,4 @@ object DeprecatedFeatures {
         rootComponent?.child(stack)
     }
 }
+ */

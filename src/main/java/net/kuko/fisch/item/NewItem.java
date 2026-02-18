@@ -10,6 +10,7 @@ import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.text.Text;
+import net.minecraft.util.Formatting;
 import net.minecraft.util.Hand;
 import net.minecraft.util.TypedActionResult;
 import net.minecraft.world.World;
@@ -37,33 +38,21 @@ public class NewItem extends Item {
         return TypedActionResult.consume(user.getMainHandStack());
     }
 
-    /*
-        override fun appendTooltip(
-        stack: ItemStack?,
-        world: World?,
-        tooltip: MutableList<Text>?,
-        context: TooltipContext?
-    ) {
-        super.appendTooltip(stack, world, tooltip, context)
-//        val rainbowPhase = TooltipState.phaseAcc.toInt()
-//        val parsed = MM.deserialize("Energy: <rainbow:$rainbowPhase>${energy_val}</rainbow> <color:#>E</color>")
-//        tooltip?.add(audience.toNative(parsed))
-    }
-     */
-
-
-    /**
-     * The Kotlin port is impossible, let's do it with {@link net.kuko.fisch.Tooltips}
-     */
     @Override
     public void appendTooltip(ItemStack stack, @Nullable World world, List<Text> tooltip, TooltipContext context) {
         super.appendTooltip(stack, world, tooltip, context);
         var text = Text.empty();
         var rgb = Tooltips.RGBEachLetter(String.valueOf(energy_val));
-        text.append("Energy: ");
+        text.append("Energy: ").styled(style -> style.withColor(Formatting.GRAY));
         text.append(rgb);
+
+        @SuppressWarnings("DataFlowIssue") // Formatting.GRAY always has a colour value
+        int grayColor = Formatting.GRAY.getColorValue();
+        int color = 0x54daf4 + grayColor;
+
         text.append(Text.literal(" E")
-                .styled(style -> style.withColor(Utils.packARGB(0x54daf4))));
-        tooltip.add(text);
+                .styled(style -> style.withColor(Utils.packARGB(color))));
+
+        tooltip.add(text.styled(Style -> Style.withItalic(true)));
     }
 }

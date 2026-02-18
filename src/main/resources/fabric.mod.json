@@ -34,11 +34,10 @@
 		"minecraft": "~1.20.1",
 		"java": ">=17",
 		"fabric-api": "*",
-		"fabric-language-kotlin": "*",
-		"modmenu": ">=7.2.2",
 		"owo-lib": ">=0.11.2+1.20"
 	},
 	"suggests": {
-		"yet_another_config_lib_v3": ">=3.6.1"
+		"yet_another_config_lib_v3": ">=3.6.1",
+		"modmenu": ">=7.2.2"
 	}
 }

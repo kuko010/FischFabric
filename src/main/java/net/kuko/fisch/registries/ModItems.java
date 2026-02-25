@@ -4,12 +4,11 @@ import io.wispforest.owo.registration.reflect.FieldRegistrationHandler;
 import io.wispforest.owo.registration.reflect.ItemRegistryContainer;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.kuko.fisch.Fisch;
-import net.kuko.fisch.item.NewItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroups;
 
 public class ModItems implements ItemRegistryContainer {
-    public static final Item NEW_ITEM = new NewItem(new Item.Settings());
+    //public static final Item NEW_ITEM = new NewItem(new Item.Settings());
 
 
     public static void register() {
@@ -19,7 +18,7 @@ public class ModItems implements ItemRegistryContainer {
 
     public static void addTab() {
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.INGREDIENTS).register(content -> {
-            content.add(NEW_ITEM); // Adds to the end
+         //   content.add(NEW_ITEM); // Adds to the end
 //            content.addAfter(Items.DIAMOND, MOD_ITEM); // Adds after a specific item
         });
     }

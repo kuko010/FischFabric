@@ -20,8 +20,6 @@ public class FischClient implements ClientModInitializer {
                         "key.categories.ui"
                 ));
 
-
-
         ClientTickEvents.END_CLIENT_TICK.register(client -> {
             while (openScreen.isPressed()) {
                 if (client.player != null) {

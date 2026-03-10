@@ -3,9 +3,9 @@ package net.kuko.fisch.datagen;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricModelProvider;
 import net.kuko.fisch.registries.ModItems;
-import net.minecraft.data.client.BlockStateModelGenerator;
-import net.minecraft.data.client.ItemModelGenerator;
-import net.minecraft.data.client.Models;
+import net.minecraft.client.renderer.block.model.ItemModelGenerator;
+import net.minecraft.data.models.BlockModelGenerators;
+import net.minecraft.data.models.ItemModelGenerators;
 
 public class ModModelProvider extends FabricModelProvider {
     public ModModelProvider(FabricDataOutput output) {
@@ -13,7 +13,7 @@ public class ModModelProvider extends FabricModelProvider {
     }
 
     @Override
-    public void generateBlockStateModels(BlockStateModelGenerator blockStateModelGenerator) {
+    public void generateBlockStateModels(BlockModelGenerators blockStateModelGenerator) {
 //        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.RUBY_BLOCK);
 //        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.RAW_RUBY_BLOCK);
 //        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.RUBY_ORE);
@@ -24,9 +24,8 @@ public class ModModelProvider extends FabricModelProvider {
     }
 
     @Override
-    public void generateItemModels(ItemModelGenerator itemModelGenerator) {
-        itemModelGenerator.register(ModItems.NEW_ITEM, Models.GENERATED);
-//        itemModelGenerator.register(ModItems.RAW_RUBY, Models.GENERATED);
+    public void generateItemModels(ItemModelGenerators itemModelGenerators) {
+        //        itemModelGenerator.register(ModItems.RAW_RUBY, Models.GENERATED);
 //
 //        itemModelGenerator.register(ModItems.COAL_BRIQUETTE, Models.GENERATED);
 //        itemModelGenerator.register(ModItems.TOMATO, Models.GENERATED);

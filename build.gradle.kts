@@ -45,6 +45,14 @@ repositories {
 			includeGroupByRegex("dev\\.onyxstudios.*")
 		}
 	}
+
+	/* CC:T */
+	maven {
+		url = uri("https://maven.squiddev.cc")
+		content {
+			includeGroup("cc.tweaked")
+		}
+	}
 }
 
 
@@ -52,13 +60,17 @@ val lib = file(".lib/1201")
 
 dependencies {
 	minecraft("com.mojang:minecraft:${property("minecraft_version")}")
-	mappings("net.fabricmc:yarn:${property("yarn_mappings")}:v2")
+	mappings(loom.officialMojangMappings())
 	modImplementation("net.fabricmc:fabric-loader:${property("loader_version")}")
 	modImplementation("net.fabricmc.fabric-api:fabric-api:${property("fabric_api_version")}")
 
 	// Utility
 	modRuntimeOnly("maven.modrinth:emi:1.1.22+1.20.1+fabric")
 	modRuntimeOnly("com.terraformersmc:modmenu:${property("modmenu_version")}")
+
+	/* CC:T */
+	modCompileOnly("cc.tweaked:cc-tweaked-${property("minecraft_version")}-fabric-api:${property("cc_version")}")
+	modRuntimeOnly("cc.tweaked:cc-tweaked-${property("minecraft_version")}-fabric:${property("cc_version")}")
 
 	/* TeamReborn Energy */
 	modImplementation("teamreborn:energy:3.0.0")
@@ -78,6 +90,10 @@ dependencies {
 	/* Config */
 	modImplementation("dev.isxander:yet-another-config-lib:${property("yacl_version")}+1.20.1-fabric")
 
+	/* Runtime funsies */
+	modRuntimeOnly("maven.modrinth:isometric-renders:0.4.5+1.20")
+
+
 
 	/* Decompiler and Mapper for .lib folder */
 	if (lib.exists() && lib.isDirectory) {
@@ -87,11 +103,6 @@ dependencies {
 			modImplementation(files(jar))
 		}
 	}
-
-	implementation("net.kyori:adventure-text-minimessage:4.26.1")
-	modImplementation("net.kyori:adventure-text-serializer-json:4.25.0")
-	modImplementation("net.kyori:adventure-text-minimessage:4.25.0")
-	modImplementation("net.kyori:adventure-platform-fabric:5.8.0")
 }
 
 loom {

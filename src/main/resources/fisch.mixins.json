@@ -11,6 +11,6 @@
     "requireAnnotations": true
   },
   "client": [
-    "LightmapTextureManagerMixin"
+    "LightTextureMixin"
   ]
 }

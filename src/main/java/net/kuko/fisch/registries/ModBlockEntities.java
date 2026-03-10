@@ -2,10 +2,12 @@ package net.kuko.fisch.registries;
 
 import io.wispforest.owo.registration.reflect.AutoRegistryContainer;
 import io.wispforest.owo.registration.reflect.FieldRegistrationHandler;
+import net.fabricmc.fabric.impl.biome.modification.BuiltInRegistryKeys;
 import net.kuko.fisch.Fisch;
-import net.minecraft.block.entity.BlockEntityType;
-import net.minecraft.registry.Registries;
-import net.minecraft.registry.Registry;
+import net.minecraft.core.Registry;
+import net.minecraft.core.registries.BuiltInRegistries;
+import net.minecraft.core.registries.Registries;
+import net.minecraft.world.level.block.entity.BlockEntityType;
 
 public class ModBlockEntities implements AutoRegistryContainer<BlockEntityType<?>> {
 //    public static final BlockEntityType<ExamplePedestalBlockEntity> EXAMPLE_PEDESTAL_BE = FabricBlockEntityTypeBuilder.create(ExamplePedestalBlockEntity::new,
@@ -13,7 +15,7 @@ public class ModBlockEntities implements AutoRegistryContainer<BlockEntityType<?
 
     @Override
     public Registry<BlockEntityType<?>> getRegistry() {
-        return Registries.BLOCK_ENTITY_TYPE;
+        return BuiltInRegistries.BLOCK_ENTITY_TYPE;
     }
 
     @Override

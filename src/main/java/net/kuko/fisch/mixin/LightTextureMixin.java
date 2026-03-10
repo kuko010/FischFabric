@@ -2,14 +2,15 @@ package net.kuko.fisch.mixin;
 
 import com.llamalad7.mixinextras.injector.wrapoperation.Operation;
 import com.llamalad7.mixinextras.injector.wrapoperation.WrapOperation;
-import net.minecraft.client.render.LightmapTextureManager;
+import net.minecraft.client.renderer.LightTexture;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 
-@Mixin(LightmapTextureManager.class)
-public class LightmapTextureManagerMixin {
+// Fabric Discord server - Julienraptor01│PrideVer ❤ (369179216031383552)
+@Mixin(LightTexture.class)
+public class LightTextureMixin {
     @WrapOperation(
-            method = "update",
+            method = "updateLightTexture",
             at = @At(
                     value = "INVOKE",
                     target = "Ljava/lang/Double;floatValue()F",
@@ -17,7 +18,8 @@ public class LightmapTextureManagerMixin {
             )
     )
     private float getGammaFloatValue(Double instance, Operation<Float> original) {
-        // Config.VisionLimiter.enableFullbright
-        return original.call((!true ? instance : Double.valueOf(Float.MAX_VALUE)));
+        //todo: add actual config, for now hardcoding for "false" (
+        var configVal = false;
+        return original.call((!configVal ? instance : Double.valueOf(Float.MAX_VALUE)));
     }
 }

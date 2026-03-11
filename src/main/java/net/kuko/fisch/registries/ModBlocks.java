@@ -1,24 +1,39 @@
 package net.kuko.fisch.registries;
 
 
-import io.wispforest.owo.registration.reflect.BlockRegistryContainer;
-import io.wispforest.owo.registration.reflect.FieldRegistrationHandler;
+import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.kuko.fisch.Fisch;
+import net.kuko.fisch.block.BlockEntityExample;
+import net.minecraft.core.Registry;
+import net.minecraft.core.registries.BuiltInRegistries;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.Blocks;
+
+public class ModBlocks {
+    /*
+    public static final Block CONDENSED_DIRT = register(
+		new Block(AbstractBlock.Settings.create().sounds(BlockSoundGroup.GRASS)),
+		"condensed_dirt",
+		true
+);
+     */
+
+    public static final Block BLOCK_ENTITY_EXAMPLE = block("block_entity_example",
+            new BlockEntityExample(FabricBlockSettings.copyOf(Blocks.STONE)));
 
 
-public class ModBlocks implements BlockRegistryContainer {
-//    public static final Block EXAMPLE_PEDESTAL = new ExamplePedestal(FabricBlockSettings.create());
-
-
-    @Override
-    public BlockItem createBlockItem(Block block, String identifier) {
-        return new BlockItem(block, new Item.Properties());
+    private static Block block(String name, Block block) { return block(name, block, true); }
+    private static Block block(String name, Block block , boolean shouldRegisterItem) {
+        ResourceLocation rl = new ResourceLocation(Fisch.MOD_ID, name);
+        if (shouldRegisterItem) {
+            BlockItem bi = new BlockItem(block, new Item.Properties());
+            Registry.register(BuiltInRegistries.ITEM, rl, bi);
+        }
+        return Registry.register(BuiltInRegistries.BLOCK, rl, block);
     }
 
-    public static void register() {
-        FieldRegistrationHandler.register(ModBlocks.class, Fisch.MOD_ID, false);
-    }
+    public static void register() {}
 }

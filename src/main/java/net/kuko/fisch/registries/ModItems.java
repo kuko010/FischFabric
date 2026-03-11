@@ -1,24 +1,26 @@
 package net.kuko.fisch.registries;
 
-import io.wispforest.owo.registration.reflect.FieldRegistrationHandler;
-import io.wispforest.owo.registration.reflect.ItemRegistryContainer;
-import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.kuko.fisch.Fisch;
-import net.minecraft.world.item.CreativeModeTabs;
+import net.minecraft.core.Registry;
+import net.minecraft.core.registries.BuiltInRegistries;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.item.Item;
 
-public class ModItems implements ItemRegistryContainer {
-    //public static final Item NEW_ITEM = new NewItem(new Item.Settings());
+public class ModItems {
+    /*
+    public static final Item SUSPICIOUS_SUBSTANCE = register(
+		// Ignore the food component for now, we'll cover it later in the food section.
+		new Item(new FabricItemSettings().food(SUSPICIOUS_FOOD_COMPONENT)),
+		"suspicious_substance"
+);
+     */
 
 
-    public static void register() {
-        FieldRegistrationHandler.register(ModItems.class, Fisch.MOD_ID, false);
-        addTab();
+    private static Item item(Item item,String name) {
+        return Registry.register(BuiltInRegistries.ITEM, new ResourceLocation(Fisch.MOD_ID, name), item);
     }
 
-    public static void addTab() {
-        ItemGroupEvents.modifyEntriesEvent(CreativeModeTabs.INGREDIENTS).register(content -> {
-         //   content.add(NEW_ITEM); // Adds to the end
-//            content.addAfter(Items.DIAMOND, MOD_ITEM); // Adds after a specific item
-        });
+    public static void register() {
+
     }
 }

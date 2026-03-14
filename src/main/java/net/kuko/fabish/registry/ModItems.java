@@ -1,6 +1,7 @@
 package net.kuko.fabish.registry;
 
 import net.kuko.fabish.Fabish;
+import net.kuko.fabish.item.PewPewItem;
 import net.minecraft.core.Registry;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.resources.ResourceLocation;
@@ -15,9 +16,9 @@ public class ModItems {
 );
      */
 
+    public static final Item PEW_PEW = item("pew_pew", new PewPewItem());
 
-
-    private static Item item(Item item,String name) {
+    private static Item item(String name, Item item) {
         return Registry.register(BuiltInRegistries.ITEM, new ResourceLocation(Fabish.MOD_ID, name), item);
     }
 

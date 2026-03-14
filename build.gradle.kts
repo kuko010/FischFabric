@@ -98,11 +98,6 @@ dependencies {
    /* implementation("org.luaj:luaj-jse:3.0.1")
     modImplementation("org.luaj:luaj-jse:3.0.1")
     include("org.luaj:luaj-jse:3.0.1")*/
-
-    /* SpruceUI */
-    include(modImplementation("dev.lambdaurora:spruceui:${project.property("spruceui_version")}") as Dependency)
-    include("dev.yumi.mc.core:yumi-mc-foundation:1.0.0-alpha.15+1.21.1")
-
     /* Config */
     modCompileOnly( "dev.isxander:yet-another-config-lib:${project.property("yacl_version")}")
     modRuntimeOnly( "dev.isxander:yet-another-config-lib:${project.property("yacl_version")}")

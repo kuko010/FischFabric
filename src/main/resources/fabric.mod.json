@@ -1,8 +1,8 @@
 {
 	"schemaVersion": 1,
-	"id": "fisch",
+	"id": "fabish",
 	"version": "${version}",
-	"name": "fisch",
+	"name": "Fabish",
 	"description": "Here can go anything, literally.",
 	"authors": [
 		"kuko"
@@ -12,20 +12,20 @@
 		"sources": "https://github.com/FabricMC/fabric-example-mod"
 	},
 	"license": "MIT0",
-	"icon": "assets/fisch/icon.png",
+	"icon": "assets/fabish/icon.png",
 	"environment": "*",
 	"entrypoints": {
 		"main": [
-			"net.kuko.fisch.Fisch"
+          "net.kuko.fabish.Fabish"
 		],
 		"fabric-datagen": [
-			"net.kuko.fisch.FischDataGenerator"
+			"net.kuko.fabish.FabishDataGenerator"
 		],
 		"modmenu": [
-			"net.kuko.fisch.config.ModMenuIntegration"
+			"net.kuko.fabish.config.ModMenuIntegration"
 		],
 		"client": [
-			"net.kuko.fisch.FischClient",
+			"net.kuko.fabish.FabishClient",
 			"com.wdiscute.libtooltips.Tooltips"
 		]
 	},

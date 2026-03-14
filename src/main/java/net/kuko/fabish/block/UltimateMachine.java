@@ -1,7 +1,6 @@
 package net.kuko.fabish.block;
 
 import net.kuko.fabish.block.entity.UltimateMachineBlockEntity;
-import net.kuko.fabish.client.screen.UltimateMachineScreen;
 import net.minecraft.client.Minecraft;
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.InteractionHand;
@@ -34,7 +33,7 @@ public class UltimateMachine  extends BaseEntityBlock {
     public InteractionResult use(BlockState blockState, Level level, BlockPos blockPos, Player player, InteractionHand interactionHand, BlockHitResult blockHitResult) {
         if (level.isClientSide()) {
             Minecraft mc = Minecraft.getInstance();
-            mc.setScreen(new UltimateMachineScreen());
+           // mc.setScreen(new UltimateMachineScreen());
         }
 
         return InteractionResult.SUCCESS;

@@ -21,9 +21,6 @@
 		"fabric-datagen": [
 			"net.kuko.fabish.FabishDataGenerator"
 		],
-		"modmenu": [
-			"net.kuko.fabish.config.ModMenuIntegration"
-		],
 		"client": [
 			"net.kuko.fabish.FabishClient",
 			"com.wdiscute.libtooltips.Tooltips"

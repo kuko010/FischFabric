@@ -5,10 +5,7 @@ import net.fabricmc.api.ModInitializer;
 import net.fabricmc.loader.api.FabricLoader;
 import net.kuko.fabish.compat.config.ConfigUtils;
 import net.kuko.fabish.data.DataRegistry;
-import net.kuko.fabish.registry.ModBlockEntities;
-import net.kuko.fabish.registry.ModBlocks;
-import net.kuko.fabish.registry.ModEnergy;
-import net.kuko.fabish.registry.ModItems;
+import net.kuko.fabish.registry.*;
 import net.minecraft.resources.ResourceLocation;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -29,6 +26,7 @@ public class Fabish implements ModInitializer {
 		ModItems.register();
 		ModEnergy.register();
 		DataRegistry.register();
+		ModEntityTypes.register();
 
 		if (FabricLoader.getInstance().isModLoaded("computercraft")) {
 			net.kuko.fabish.compat.computercraft.UpgradeRegistry.register();

@@ -6,6 +6,8 @@ import net.minecraft.core.Registry;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.Items;
 
 public class ModItems {
     /*
@@ -16,7 +18,7 @@ public class ModItems {
 );
      */
 
-    public static final Item PEW_PEW = item("pew_pew", new PewPewItem());
+    public static final Item PEW_PEW = item("pew_pew", new PewPewItem(new ItemStack(Items.BASALT)));
 
     private static Item item(String name, Item item) {
         return Registry.register(BuiltInRegistries.ITEM, new ResourceLocation(Fabish.MOD_ID, name), item);

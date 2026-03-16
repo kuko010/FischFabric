@@ -2,7 +2,7 @@ package net.kuko.ish.registry;
 
 
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
-import net.kuko.ish.Fabish;
+import net.kuko.ish.Ish;
 //import net.kuko.fisch.block.BlockEntityExample;
 import net.kuko.ish.registry.block.UltimateMachine;
 import net.minecraft.core.Registry;
@@ -31,7 +31,7 @@ public class ModBlocks {
 
     private static Block block(String name, Block block) { return block(name, block, true); }
     private static Block block(String name, Block block , boolean shouldRegisterItem) {
-        ResourceLocation rl = new ResourceLocation(Fabish.MOD_ID, name);
+        ResourceLocation rl = new ResourceLocation(Ish.MOD_ID, name);
         if (shouldRegisterItem) {
             BlockItem bi = new BlockItem(block, new Item.Properties());
             Registry.register(BuiltInRegistries.ITEM, rl, bi);

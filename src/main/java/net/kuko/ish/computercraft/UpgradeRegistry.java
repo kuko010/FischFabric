@@ -8,7 +8,7 @@ import dan200.computercraft.api.turtle.ITurtleAccess;
 import dan200.computercraft.api.turtle.ITurtleUpgrade;
 import dan200.computercraft.api.turtle.TurtleSide;
 import dan200.computercraft.api.turtle.TurtleUpgradeSerialiser;
-import net.kuko.ish.Fabish;
+import net.kuko.ish.Ish;
 import net.kuko.ish.computercraft.turtle.ExampleTurtleUpgrade;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.resources.model.BakedModel;
@@ -29,7 +29,7 @@ public class UpgradeRegistry {
     public static void register() {
         @SuppressWarnings("unchecked")
         var turtleUpgradeSerializers = (Registry<TurtleUpgradeSerialiser<?>>) BuiltInRegistries.REGISTRY.get(TurtleUpgradeSerialiser.registryId().location());
-        Registry.register(turtleUpgradeSerializers, new ResourceLocation(Fabish.MOD_ID, "example_turtle_upgrade"), UpgradeRegistry.EXAMPLE_TURTLE_UPGRADE);
+        Registry.register(turtleUpgradeSerializers, new ResourceLocation(Ish.MOD_ID, "example_turtle_upgrade"), UpgradeRegistry.EXAMPLE_TURTLE_UPGRADE);
 
     }
 

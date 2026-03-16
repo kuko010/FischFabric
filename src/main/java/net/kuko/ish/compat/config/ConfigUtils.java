@@ -3,7 +3,7 @@ package net.kuko.ish.compat.config;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import net.fabricmc.loader.api.FabricLoader;
-import net.kuko.ish.Fabish;
+import net.kuko.ish.Ish;
 
 import java.io.IOException;
 import java.nio.file.Files;
@@ -21,7 +21,7 @@ public class ConfigUtils {
             // Save the handler instance instead of a "new Config()"
             Files.writeString(CONFIG_PATH, GSON.toJson(handler));
         } catch (IOException e) {
-            Fabish.LOGGER.error("Failed to save config", e);
+            Ish.LOGGER.error("Failed to save config", e);
         }
     }
 
@@ -31,7 +31,7 @@ public class ConfigUtils {
             // Load the data back into our handler instance
             ConfigUtils.handler = GSON.fromJson(Files.readString(CONFIG_PATH), ConfigOptions.class);
         } catch (IOException e) {
-            Fabish.LOGGER.error("Failed to load config", e);
+            Ish .LOGGER.error("Failed to load config", e);
         }
     }
 }

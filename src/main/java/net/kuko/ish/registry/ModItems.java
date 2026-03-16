@@ -1,6 +1,6 @@
 package net.kuko.ish.registry;
 
-import net.kuko.ish.Fabish;
+import net.kuko.ish.Ish;
 import net.minecraft.core.Registry;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.resources.ResourceLocation;
@@ -16,7 +16,7 @@ public class ModItems {
      */
 
     private static Item item(String name, Item item) {
-        return Registry.register(BuiltInRegistries.ITEM, new ResourceLocation(Fabish.MOD_ID, name), item);
+        return Registry.register(BuiltInRegistries.ITEM, new ResourceLocation(Ish.MOD_ID, name), item);
     }
 
     public static void register() {

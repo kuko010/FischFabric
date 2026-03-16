@@ -4,7 +4,7 @@ import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.fabric.api.client.event.lifecycle.v1.ClientTickEvents;
 import net.fabricmc.loader.api.FabricLoader;
 
-public class FabishClient implements ClientModInitializer {
+public class IshClient implements ClientModInitializer {
 
 
 

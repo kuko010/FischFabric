@@ -4,7 +4,7 @@ package net.kuko.ish.registry;
 
 
 import net.fabricmc.fabric.api.object.builder.v1.block.entity.FabricBlockEntityTypeBuilder;
-import net.kuko.ish.Fabish;
+import net.kuko.ish.Ish;
 import net.kuko.ish.registry.block.entity.UltimateMachineBlockEntity;
 import net.minecraft.core.Registry;
 import net.minecraft.core.registries.BuiltInRegistries;
@@ -21,7 +21,7 @@ public class ModBlockEntities  {
 
     public static final BlockEntityType<UltimateMachineBlockEntity> ULTIMATE_MACHINE_BLOCK_ENTITY_BE =
             Registry.register(BuiltInRegistries.BLOCK_ENTITY_TYPE,
-                    new ResourceLocation(Fabish.MOD_ID, "ultimate_machine_be"),
+                    new ResourceLocation(Ish.MOD_ID, "ultimate_machine_be"),
                     FabricBlockEntityTypeBuilder.create(UltimateMachineBlockEntity::new,
                             ModBlocks.ULTIMATE_MACHINE).build());
 

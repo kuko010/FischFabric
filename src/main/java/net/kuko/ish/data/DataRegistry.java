@@ -7,7 +7,7 @@ import com.mojang.serialization.Codec;
 import com.mojang.serialization.JsonOps;
 import net.fabricmc.fabric.api.resource.IdentifiableResourceReloadListener;
 import net.fabricmc.fabric.api.resource.ResourceManagerHelper;
-import net.kuko.ish.Fabish;
+import net.kuko.ish.Ish;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.server.packs.PackType;
 import net.minecraft.server.packs.resources.ResourceManager;
@@ -21,7 +21,7 @@ public class DataRegistry extends SimpleJsonResourceReloadListener implements Id
     private static final Gson GSON = new GsonBuilder().create();
 
     public DataRegistry() {
-        super(GSON, Fabish.MOD_ID + "/data");
+        super(GSON, Ish.MOD_ID + "/data");
     }
 
     @Override
@@ -31,13 +31,13 @@ public class DataRegistry extends SimpleJsonResourceReloadListener implements Id
 
     @Override
     public ResourceLocation getFabricId() {
-        return new ResourceLocation(Fabish.MOD_ID, "data_listener");
+        return new ResourceLocation(Ish.MOD_ID, "data_listener");
     }
 
     public static <T> void handle(Map<ResourceLocation, JsonElement> object, Codec<T> codec, Consumer<T> onSuccess) {
         object.forEach((rl, element) ->
                 codec.parse(JsonOps.INSTANCE, element)
-                        .resultOrPartial(error -> Fabish.LOGGER.error("Failed to parse {}: {}", rl, error))
+                        .resultOrPartial(error -> Ish.LOGGER.error("Failed to parse {}: {}", rl, error))
                         .ifPresent(onSuccess)
         );
     }
